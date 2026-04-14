@@ -28,9 +28,10 @@
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   color: #9CA3AF;
-  font-size: 18px;
+  font-size: 22px;
   background: rgba(255, 255, 255, 0.02);
   transition: all 0.3s ease;
+  z-index: 9999;
 }
 
 /* HOVER EFFECT */
