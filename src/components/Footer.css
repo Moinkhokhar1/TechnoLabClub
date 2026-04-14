@@ -100,6 +100,13 @@
   .social-icons {
     justify-content: center;
     flex-wrap: wrap;
+    z-index: 2;
+  }
+
+  .social-icons a {
+    background: rgba(255, 255, 255, 0.08);
+    /* 👈 stronger contrast */
+    border: 1px solid rgba(255, 255, 255, 0.2);
   }
 
   .footer p {
@@ -108,7 +115,12 @@
 
   .footer-content {
     flex-direction: column;
-    gap: 20px;
+    align-items: center;
+    gap: 25px;
+  }
+
+  .footer-left {
+    align-items: center;
   }
 
   .footer-right {
@@ -121,6 +133,3 @@
     gap: 20px;
   }
 }
-
-
-
