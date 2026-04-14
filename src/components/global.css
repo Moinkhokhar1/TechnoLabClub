@@ -1,0 +1,33 @@
+/* GLOBAL BACKGROUND */
+
+.global-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.global-bg canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+}
+
+.home-section {
+  position: relative;
+  z-index: 1;
+}
+
+/* Ensure no horizontal overflow on mobile */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}

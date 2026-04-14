@@ -1,0 +1,237 @@
+/* HOMECSS */
+
+@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap');
+
+.home-section {
+  background: transparent;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.home-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px;
+  width: 100%;
+}
+
+/* LEFT */
+.home-left {
+  width: 45%;
+}
+
+.home-left h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: var(--white);
+}
+
+.home-left p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+/* RIGHT */
+.home-right {
+  width: 50%;
+  position: relative;
+  height: 500px;
+}
+
+.img {
+  position: absolute;
+  width: 320px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 20px;
+  border: 2px solid rgba(59,130,246,0.2);
+  box-shadow: 0 20px 40px rgba(37,99,235,0.2);
+  transition: transform 0.4s ease, z-index 0.3s ease;
+}
+
+/* IMAGE 1 - FLOAT UP DOWN */
+.img1 {
+  top: 0;
+  left: 50px;
+  animation: float1 6s ease-in-out infinite;
+}
+
+@keyframes float1 {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0); }
+}
+
+/* IMAGE 2 - ROTATE SLIGHT */
+.img2 {
+  top: 80px;
+  left: 200px;
+  animation: rotate2 8s infinite linear;
+}
+
+@keyframes rotate2 {
+  0% { transform: rotate(8deg); }
+  50% { transform: rotate(12deg); }
+  100% { transform: rotate(8deg); }
+}
+
+/* IMAGE 3 - SIDE SLIDE */
+.img3 {
+  top: 200px;
+  left: 20px;
+  animation: slide3 7s ease-in-out infinite;
+}
+
+@keyframes slide3 {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(30px); }
+  100% { transform: translateX(0); }
+}
+
+/* IMAGE 4 - SCALE PULSE */
+.img4 {
+  top: 250px;
+  left: 220px;
+  animation: scale4 5s ease-in-out infinite;
+}
+
+.img5 {
+  top: 4px;
+  left: 320px;
+  animation: rotate2 8s infinite linear;
+}
+
+@keyframes scale4 {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+.img:hover {
+  transform: scale(1.05) rotate(0deg);
+  z-index: 10;
+  box-shadow: 0 25px 60px rgba(59,130,246,0.4);
+}
+
+.nav-logo {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+
+
+/* ============================================
+   RESPONSIVE — TABLET (max-width: 1024px)
+   ============================================ */
+@media (max-width: 1024px) {
+  .home-container {
+    padding: 60px 40px;
+  }
+
+  .home-left {
+    width: 48%;
+  }
+
+  .home-left h1 {
+    font-size: 38px;
+  }
+
+  .home-right {
+    width: 48%;
+    height: 420px;
+  }
+
+  .img {
+    width: 240px;
+    height: 165px;
+  }
+
+  .img2 { left: 140px; }
+  .img4 { left: 150px; }
+  .img5 { left: 240px; }
+}
+
+
+/* ============================================
+   RESPONSIVE — MOBILE (max-width: 768px)
+   ============================================ */
+@media (max-width: 768px) {
+  .home-container {
+    flex-direction: column;
+    padding: 60px 24px 40px;
+    gap: 40px;
+  }
+
+  /* LEFT takes full width, centered */
+  .home-left {
+    width: 100%;
+    text-align: center;
+  }
+
+  .home-left h1 {
+    font-size: 32px;
+    margin-bottom: 16px;
+  }
+
+  .home-left p {
+    font-size: 15px;
+  }
+
+  /* RIGHT: shrink and contain the floating images */
+  .home-right {
+    width: 100%;
+    height: 320px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .img {
+    width: 160px;
+    height: 110px;
+    border-radius: 14px;
+  }
+
+  /* Reposition images to fit smaller container */
+  .img1 { top: 0;    left: 10px; }
+  .img2 { top: 50px; left: 120px; }
+  .img3 { top: 140px; left: 0px; }
+  .img4 { top: 170px; left: 130px; }
+  .img5 { top: 0px;  left: 220px; }
+}
+
+
+/* ============================================
+   RESPONSIVE — SMALL MOBILE (max-width: 480px)
+   ============================================ */
+@media (max-width: 480px) {
+  .home-container {
+    padding: 50px 16px 32px;
+  }
+
+  .home-left h1 {
+    font-size: 26px;
+  }
+
+  .home-right {
+    height: 260px;
+  }
+
+  .img {
+    width: 130px;
+    height: 90px;
+    border-radius: 10px;
+  }
+
+  .img1 { top: 0;    left: 5px; }
+  .img2 { top: 40px; left: 100px; }
+  .img3 { top: 120px; left: 0px; }
+  .img4 { top: 145px; left: 105px; }
+  .img5 { top: 0px;  left: 190px; }
+
+  .nav-logo {
+    height: 32px;
+  }
+}
