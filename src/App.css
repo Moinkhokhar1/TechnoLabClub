@@ -14,6 +14,7 @@ body,
   height: 100%;
   /* background: #0B0F1A; */
   font-family: 'Doto', sans-serif;
+  font-weight: 700;
 }
 
 /* MAIN APP STRUCTURE */
@@ -38,7 +39,8 @@ html {
 
 body {
   margin: 0;
-  font-family: Arial;
+  font-family: 'Doto', sans-serif;
+  font-weight: 700;
   scroll-behavior: smooth;
   background: var(--bg);
   color: var(--white);

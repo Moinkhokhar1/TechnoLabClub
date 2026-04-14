@@ -191,6 +191,8 @@
   border-radius: 25px;
   border: none;
   font-family: 'Doto', sans-serif;
+  font-weight: 700;
+  font-style: bold;
   background: linear-gradient(90deg, #3B82F6, #2563EB);
   color: white;
   cursor: pointer;
