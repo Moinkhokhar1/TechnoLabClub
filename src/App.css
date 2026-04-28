@@ -14,7 +14,6 @@ body,
   height: 100%;
   /* background: #0B0F1A; */
   font-family: 'Doto', sans-serif;
-  font-weight: 700;
 }
 
 /* MAIN APP STRUCTURE */
@@ -39,8 +38,7 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Doto', sans-serif;
-  font-weight: 700;
+  font-family: Arial;
   scroll-behavior: smooth;
   background: var(--bg);
   color: var(--white);
@@ -187,8 +185,118 @@ textarea {
   padding: 10px;
   width: 80%;
 }
+
+/* ---------- NAV LINKS WRAPPER ---------- */
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+/* ---------- HAMBURGER ---------- */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  z-index: 1100;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+/* ---------- ANIMATION ---------- */
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translateY(8px);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-8px);
+}
+
+/* ========================= */
+/* 📱 MOBILE */
+/* ========================= */
 @media (max-width: 768px) {
+
+   .navbar {
+    left: 0;
+    transform: none;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 0;
+    justify-content: space-between;
+    padding: 12px 16px;
+    background: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+
+    border: none !important;
+    box-shadow: none !important;
+
+    padding: 10px 16px;
+  }
+
+  /* SHOW HAMBURGER */
+  .hamburger {
+    display: flex;
+    margin-left: auto;
+  }
+
+  /* HIDE LINKS */
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+
+    padding: 20px;
+
+    background: rgba(11, 15, 26, 0.95);
+    backdrop-filter: blur(20px);
+
+    border-radius: 0 0 20px 20px;
+
+    opacity: 0;
+    pointer-events: none;
+
+    transform: translateY(-20px);
+    transition: all 0.3s ease;
+  }
+
+  .nav-links.active {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0);
+  }
+
+  .nav-links a {
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+  }
+
   .floating-logo {
     display: none;
   }
+
+  .navbar.scrolled {
+    background: rgba(11, 15, 26, 0.95);
+  }
+
 }
+
+

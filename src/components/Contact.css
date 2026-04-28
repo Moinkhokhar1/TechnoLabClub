@@ -63,7 +63,7 @@
   width: 100%;
   margin-bottom: 15px;
   padding: 12px;
-  font-family: 'Doto', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 700;
   font-style: bold;
   background: rgba(255,255,255,0.05);
@@ -136,7 +136,7 @@
   top: -19px;
   font-size: 12px;
   color: #3B82F6;
-  font-family: 'Doto', 'sans-serif';
+  font-family: 'Roboto', 'sans-serif';
   font-weight: 700;
 }
 

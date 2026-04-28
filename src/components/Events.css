@@ -150,6 +150,76 @@ body {
   box-shadow: 0 10px 30px rgba(59, 130, 246, 0.2);
 }
 
+/* ---------- WRAPPER ---------- */
+.past-card-wrapper {
+  margin-bottom: 25px;
+}
+
+/* ---------- CARD ---------- */
+.past-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ---------- LINK ---------- */
+.link {
+  cursor: pointer;
+  color: #007bff;
+  font-weight: 500;
+}
+
+/* ---------- SWIPER ---------- */
+.swiper-container-custom {
+  margin-top: 15px;
+  width: 100%;
+}
+
+/* ---------- IMAGE ---------- */
+.swiper-container-custom img {
+  width: 100%;
+  max-width: 550px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+  margin: auto;
+}
+
+/* ---------- DOTS ---------- */
+.swiper-pagination-bullet {
+  background: #000 !important;
+  opacity: 0.4;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+/* ========================= */
+/* 📱 TABLET */
+/* ========================= */
+@media (max-width: 768px) {
+  .swiper-container-custom img {
+    height: 220px;
+  }
+}
+
+/* ========================= */
+/* 📲 MOBILE */
+/* ========================= */
+@media (max-width: 480px) {
+
+  .past-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .swiper-container-custom img {
+    height: 180px;
+  }
+}
 
 /* ============================================
    RESPONSIVE — TABLET (max-width: 768px)
